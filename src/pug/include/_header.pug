@@ -1,21 +1,23 @@
 include ./_mixins
 
 header.header
-  .header__left
     nav.header__nav
       .container
         ul.header__nav_menu
           li.header__nav_menu-item
-            a(href="#!") ОБО МНЕ
+            a(href="#!").main-item обо мне
           li.header__nav_menu-item
-            a(href="#!") ПОРТФОЛИО
+            a(href="#!").main-item портфолио
           li.header__nav_menu-item
-            a(href="#!") КОНТАКТЫ
+            a(href="#!").main-item контакты
     .container
-      .header__left_title
-        h1 Екатерина Мелисова
-        .header__left_subtitle.main-item ДИЗАЙНЕР-ИНТЕРЬЕРА
-      .image__small
-        img(src="@img/poster-img.png", alt="small image")
-  .header__right
-    img(src="@img/main-img.png", alt="main image").main_image
+      .header__content
+        .header__content_title
+          h1 Екатерина Мелисова
+          h2.header__content_subtitle.main-item дизайнер-интерьера
+        .header__video
+          img(src="@img/poster-img.png", alt="small image")
+          button.header__video_btn #[+svg-icon('arrow').icon-arrow]
+          p Смотреть<br>видео-презентацию
+    .header__right
+      img(src="@img/main-img.png", alt="main image").main_image

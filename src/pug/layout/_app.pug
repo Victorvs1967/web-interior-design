@@ -10,9 +10,6 @@ html(lang="en")
     script(src="./js/main.min.js", defer)
 
   body.main__body
-
-    include ../include/_header
-
+    block header
     block page
-
-    include ../include/_footer
+    block footer

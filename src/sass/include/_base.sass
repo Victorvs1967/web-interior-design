@@ -1,13 +1,11 @@
 @import ./vars
 
-*
- margin: 0
- padding: 0
- border: 0
-
 *,
 *:before,
 *:after
+ margin: 0
+ padding: 0
+ border: 0
  box-sizing: border-box
 
 html,
@@ -19,6 +17,7 @@ body
 body
  min-height: 100vh
  font-size: 1.4rem
+
  &.locked
   overflow: hidden
 
@@ -27,19 +26,21 @@ nav,
 header,
 footer,
 section
-  display: block
+ display: block
 
 // Common Styles
 h1,
 h2
-  font-family: $fontSecondary
-  font-weight: 400
-  line-height: 1.25
-  color: $secondary
+ font-family: $fontSecondary
+ font-weight: 400
+ line-height: 1.25
+ color: $secondary
+
 h1
-  font-size: 8rem
+ font-size: 8rem
+
 h2
-  font-size: 4rem
+ font-size: 4rem
 
 a,
 a:visited,
@@ -47,18 +48,31 @@ a:hover
  text-decoration: none
  color: inherit
 
-ul li
+ul,
+li
  list-style: none
 
+img
+ max-width: 100%
+ height: auto
+ display: block
+
+button
+ display: inline-block
+ cursor: pointer
+ border: none
+ outline: none
+ background-color: transparent
+
 .container
-  max-width: $containerWidth + px
-  width: 100%
-  margin: 0 auto
-  padding: 0 $containerSidePadding + px
+ max-width: $containerWidth + px
+ width: 100%
+ margin: 0 auto
+ padding: 0 ($containerSidePadding + px)
 
 .main-item
-  font-family: $fontMain
-  font-size: 1.3rem
-  line-height: 1.15
-  letter-spacing: 0.06em
-  text-transform: uppercase
+ font-family: $fontMain
+ font-size: 1.3rem
+ line-height: 1.15
+ letter-spacing: 0.06em
+ text-transform: uppercase

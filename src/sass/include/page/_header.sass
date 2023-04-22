@@ -1,44 +1,72 @@
 @import ../vars
 
 .header
-  display: flex
+  height: 80rem
+  position: relative
   background: $secondaryLight
   &__nav
-    height: 7rem
-    display: flex
-    align-items: center
     background: $light
     &_menu
+      height: 7rem
       display: flex
       align-items: center
-      gap: 3.7rem
+      gap: 4rem
       &-item
         color: $secondary
+        position: relative
+        transition: .4s color
         &:hover
-          position: relative
-          &::after
-            content: ''
-            width: calc(100% + 6px)
-            height: 2px
-            position: absolute
-            left: -3px
-            bottom: 0
-            background: $secondary
-  &__left
-    .container
-      height: calc( 100% - 7rem )
-      display: flex
-      flex-direction: column
-      justify-content: space-between
+          color: $hilight
+        &::after
+          width: 0
+          content: ''
+          height: 1px
+          position: absolute
+          left: -3px
+          bottom: 0
+          background: $hilight
+          transition: .3s width
+        &:hover::after
+          width: calc(100% + 6px)
+  &__content
+    height: calc( 100vh - 7rem )
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     &_title
-      width: 100%
-      margin-top: 25%
+      max-width: 47rem
+      margin-top: 15%
     &_subtitle
-      margin-top: 3.7rem
-    .image__small
-      img
-        height: 100%
+      margin-top: 1.5rem
+  &__video
+    display: flex
+    align-items: center
+    &_btn
+      width: 7.8rem
+      height: 7.8rem
+      display: flex
+      justify-content: center
+      align-items: center
+      background: $hilight
+      border-radius: 50%
+      transform: translateX(-50%)
+      .icon-arrow
+        width: 1.5rem
+        height: 1.5rem
+        fill: #fff
+        transform: rotate(180deg)
+    p
+      margin-left: -2rem
+      font-size: 14px
+      line-height: 1.7
+
   &__right
-    height: 100vh
+    width: 50vw
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
     .main_image
       height: 100%
+      object-fit: cover
+      object-position: center
