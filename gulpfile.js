@@ -10,7 +10,7 @@ import svgSprite from './task/svgsprite.js';
 import font, { fontsStyle } from './task/font.js';
 import clear from './task/clear.js';
 
-export { clear, styles, scripts, pug, font, image };
+export { clear, styles, scripts, pug, font, image, svgSprite };
 
 const { watch, series, parallel } = gulp;
 const browsersync = browserSync.create();

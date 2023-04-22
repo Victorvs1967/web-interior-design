@@ -1,1 +1,44 @@
-@use '../component/navbar'
+@import ../vars
+
+.header
+  display: flex
+  background: $secondaryLight
+  &__nav
+    height: 7rem
+    display: flex
+    align-items: center
+    background: $light
+    &_menu
+      display: flex
+      align-items: center
+      gap: 3.7rem
+      &-item
+        color: $secondary
+        &:hover
+          position: relative
+          &::after
+            content: ''
+            width: calc(100% + 6px)
+            height: 2px
+            position: absolute
+            left: -3px
+            bottom: 0
+            background: $secondary
+  &__left
+    .container
+      height: calc( 100% - 7rem )
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &_title
+      width: 100%
+      margin-top: 25%
+    &_subtitle
+      margin-top: 3.7rem
+    .image__small
+      img
+        height: 100%
+  &__right
+    height: 100vh
+    .main_image
+      height: 100%
