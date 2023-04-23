@@ -2,4 +2,44 @@ include ./_mixins
 
 footer.footer
   .container
-    h2 Контакты
+    h2.footer__title Контакты
+    .footer__content
+      form.contact_form
+        input(type="text", placeholder="Ваше имя").contact_form-field
+        input(type="text", placeholder="Ваш E-mail").contact_form-field
+        textarea(, cols="30", rows="15" placeholder="Сообщение").contact_form-text
+        button(type="button").success-btn ОТПРАВИТЬ
+      nav.footer__nav
+        ul.footer__nav_menu
+          li.footer__nav_menu-item
+            +svg-icon('phone').footer__nav_menu-icon
+            .footer__nav_menu-text
+              .main-subtitle ТЕЛЕФОН:
+              a(href="#!") 8 903 438-44-66
+          li.footer__nav_menu-item
+            +svg-icon('email').footer__nav_menu-icon
+            .footer__nav_menu-text
+              .main-subtitle ПОЧТА:
+              a(href="#!") Melisova@gmail.com
+          li.footer__nav_menu-item
+            +svg-icon('pinterest').footer__nav_menu-icon
+            .footer__nav_menu-text
+              .main-subtitle PINTEREST:
+              a(href="#!") www.pinterest.ru/melisova
+        ul.footer__nav_menu
+          li.footer__nav_menu-item
+            +svg-icon('instagram_n').footer__nav_menu-icon
+            .footer__nav_menu-text
+              .main-subtitle INSTAGRAM:
+              a(href="#!") melisova_studio
+          li.footer__nav_menu-item
+            +svg-icon('point').footer__nav_menu-icon
+            .footer__nav_menu-text
+              .main-subtitle АДРЕС:
+              a(href="#!") г. Москва, ул. Мытная, д.7, стр.1
+          li.footer__nav_menu-item
+            +svg-icon('behance').footer__nav_menu-icon
+            .footer__nav_menu-text
+              .main-subtitle BEHANCE:
+              a(href="#!") www.behance.net/melisova
+    .footer__copyright © 2019  Ekaterina Melisova

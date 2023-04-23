@@ -2,3 +2,52 @@
 
 .footer
   width: 100%
+  height: 90rem
+  padding-top: 8rem
+  padding-bottom: 5rem
+  &__title
+    margin-bottom: 9rem
+  &__content
+    display: flex
+    justify-content: space-between
+    .contact_form
+      width: 50rem
+      display: flex
+      flex-direction: column
+      gap: 2rem
+      input,
+      textarea
+        border: 1px solid #DDDDDD
+        &[placeholder]
+          padding: 2rem
+
+    .success-btn
+      width: 23.5rem
+      height: 6.5rem
+      display: flex
+      justify-content: center
+      align-items: center
+      background: $hilight
+      color: $secondary
+  &__nav
+    width: 55rem
+    display: flex
+    justify-content: space-between
+    &_menu
+      width: 27rem
+      display: flex
+      flex-direction: column
+      gap: 6.5rem
+      &-item
+        display: flex
+        align-items: center
+        gap: 1.9rem
+        color: $secondary
+      &-icon
+        width: 2.4rem
+        height: 2.4rem
+        fill: $secondary
+  &__copyright
+    margin-top: 15rem
+    text-align: center
+    color: $secondary

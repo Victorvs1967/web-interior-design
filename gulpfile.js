@@ -7,6 +7,7 @@ import styles from './task/styles.js';
 import scripts from './task/scripts.js';
 import image from './task/image.js';
 import svgSprite from './task/svgsprite.js';
+import { libCss, libJs } from './task/libs.js';
 import font, { fontsStyle } from './task/font.js';
 import clear from './task/clear.js';
 
@@ -20,6 +21,7 @@ const watcher = () => {
   watch(app.path.sass.watch, styles).on('all', browsersync.reload);
   watch(app.path.js.watch, scripts).on('all', browsersync.reload);
   watch(app.path.img.watch, image).on('all', browsersync.reload);
+  watch(app.path.lib.watch, parallel(libCss, libJs)).on('all', browsersync.reload);
 };
 
 const server = () =>
@@ -33,7 +35,7 @@ export const fonts = series(font, fontsStyle);
 
 export const build = series(
   clear,
-  parallel(fonts, svgSprite, image),
+  parallel(fonts, svgSprite, image, libCss, libJs),
   parallel(styles, scripts, pug),
 );
 

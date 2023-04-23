@@ -1,23 +1,32 @@
 include ./_mixins
 
 header.header
-    nav.header__nav
-      .container
-        ul.header__nav_menu
-          li.header__nav_menu-item
-            a(href="#!").main-item обо мне
-          li.header__nav_menu-item
-            a(href="#!").main-item портфолио
-          li.header__nav_menu-item
-            a(href="#!").main-item контакты
+  nav.header__nav
     .container
-      .header__content
-        .header__content_title
-          h1 Екатерина Мелисова
-          h2.header__content_subtitle.main-item дизайнер-интерьера
-        .header__video
-          img(src="@img/poster-img.png", alt="small image")
-          button.header__video_btn #[+svg-icon('arrow').icon-arrow]
+      ul.header__nav_menu
+        li.header__nav_menu-item
+          a(href="#!").main-item обо мне
+        li.header__nav_menu-item
+          a(href="#!").main-item портфолио
+        li.header__nav_menu-item
+          a(href="#!").main-item контакты
+  .container
+    .header__content
+      .header__content_title
+        h1 Екатерина Мелисова
+        h2.header__content_subtitle.main-item дизайнер-интерьера
+      .header__video
+        img(src="@img/poster-img.png", width="237", height="178", alt="small image")
+        .header__video_play
+          button.header__video_play-btn #[+svg-icon('arrow').icon-arrow]
           p Смотреть<br>видео-презентацию
-    .header__right
-      img(src="@img/main-img.png", alt="main image").main_image
+
+  .header__right.owl-carousel
+        img(src="@img/main-img_1.png", alt="main image").main_image
+        img(src="@img/1_1.png", alt="main image").main_image
+        img(src="@img/2_1.png", alt="main image").main_image
+        img(src="@img/3_1.png", alt="main image").main_image
+        img(src="@img/4_1.png", alt="main image").main_image
+        img(src="@img/5_1.png", alt="main image").main_image
+        img(src="@img/6_1.png", alt="main image").main_image
+        img(src="@img/7_1.png", alt="main image").main_image

@@ -16,11 +16,13 @@ const path = {
   },
   sass: {
     src: src.concat('/sass/*.sass'),
+    lib: src.concat('/lib/css/*.css'),
     watch: src.concat('/sass/**/*.sass'),
     dest: dest.concat('/css/'),
   },
   js: {
     src: src.concat('/scripts/*.js'),
+    lib: src.concat('/lib/js/*.js'),
     watch: src.concat('/scripts/**/*.js'),
     dest: dest.concat('/js/'),
   },
@@ -34,6 +36,13 @@ const path = {
     src: src.concat('/font/**/*.{ttf,otf,eot,otc,woff,woff2,svg}'),
     watch: src.concat('/font/**/*.{ttf,otf,eot,otc,woff,woff2,svg}'),
     dest: dest.concat('/font/'),
+  },
+  lib: {
+    srcCss: src.concat('/libs/css/*.css'),
+    srcJs: src.concat('/libs/js/*.js'),
+    watch: src.concat(['/libs/css/*.css', '/libs/js/*.js']),
+    destCss: dest.concat('/css/'),
+    destJs: dest.concat('/js/'),
   },
 };
 
