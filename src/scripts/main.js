@@ -1,3 +1,16 @@
+import { Fancybox } from "@fancyapps/ui"
+
+Fancybox.bind("[data-fancybox]", {
+  Thumbs: false,
+  Toolbar: {
+    display: {
+      left: [],
+      middle: [],
+      right: ["close"],
+    },
+  },
+});
+
 $(document).ready(function () {
 
   const owl = $('.owl-carousel');

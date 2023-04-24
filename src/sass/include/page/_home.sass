@@ -2,5 +2,19 @@
 
 .main
   width: 100%
-  padding-top: 8.8rem
-  padding-bottom: 5rem
+  .portfolio
+    padding-top: 8.8rem
+    padding-bottom: 10rem
+    &__title
+      margin-bottom: 5.1rem
+    &__content
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 2rem
+      &_link
+        overflow: hidden
+        img
+          transition: .4s
+      &_link:hover
+        img
+          transform: scale(1.05)

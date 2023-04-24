@@ -1,4 +1,5 @@
 include ./_mixins
+include ./_vars
 
 header.header#header
   nav.header__nav
@@ -14,9 +15,9 @@ header.header#header
   .container
     .header__content
       .header__content_title
-        h1 Екатерина Мелисова
-        h2.header__content_subtitle.main-item дизайнер-интерьера
-      .header__video
+        h1= header_ru.title
+        h2.header__content_subtitle.main-item= header_ru.subtitle
+      a(href="https://youtu.be/OsENkzlfYFw", data-fancybox).header__video
         img(src="@img/poster-img.png", width="237", height="178", alt="small image")
         .header__video_play
           button.header__video_play-btn #[+svg-icon('arrow').icon-arrow]
