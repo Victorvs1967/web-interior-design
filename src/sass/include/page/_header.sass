@@ -1,7 +1,6 @@
 @import ../vars
 
 .header
-  height: 80rem
   position: relative
   background: $secondaryLight
   &__nav
@@ -84,7 +83,49 @@
     top: 0
     bottom: 0
     right: 0
+    background: $hilight
     .main_image
       height: 100vh
       object-position: center
       object-fit: cover
+    .owl-dots
+      position: absolute
+      left: 4.8rem
+      bottom: 4.8rem
+      display: flex
+      gap: .9rem
+      z-index: 2
+      .owl-dot
+        span
+          display: inline-block
+          width: 1.7rem
+          height: 1.7rem
+          background: #C4C4C4
+          border-radius: 50%
+        &.active
+          span
+            background: #fff
+    &_nav
+      position: absolute
+      right: 8.1rem
+      bottom: 3.5rem
+      display: flex
+      gap: 1.5rem
+      z-index: 2
+      button
+        width: 6.4rem
+        height: 6.4rem
+        border: 2px solid #fff
+        outline: none
+        &:hover
+          opacity: .6
+        .icon-prev,
+        .icon-next
+          width: 1.5rem
+          height: 1.5rem
+          fill: #fff
+          background-image: url('@img/icons/icons.svg#arrow')
+          background-repeat: no-repeat
+          background-position: center
+        .icon-next
+          transform: rotate(180deg)

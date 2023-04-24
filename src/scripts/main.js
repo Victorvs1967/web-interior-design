@@ -1,6 +1,18 @@
 $(document).ready(function () {
-  $(".owl-carousel").owlCarousel({
+
+  const owl = $('.owl-carousel');
+
+  owl.owlCarousel({
     loop: true,
-    items: 1
+    margin: 5,
+    items: 1,
    });
+
+  $('.header__right_nav-next').click(function () {
+    owl.trigger('next.owl.carousel');
+  });
+
+  $('.header__right_nav-prev').click(function () {
+    owl.trigger('prev.owl.carousel');
+  });
 });
