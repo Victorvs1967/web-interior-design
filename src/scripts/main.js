@@ -6,6 +6,7 @@ $(document).ready(function () {
     loop: true,
     margin: 5,
     items: 1,
+    smartSpeed: 500,
    });
 
   $('.header__right_nav-next').click(function () {
