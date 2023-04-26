@@ -1,0 +1,21 @@
+@mixin contact($width: 26rem, $height: 4rem)
+  &-item
+    width: $width
+    height: $height
+    display: flex
+    align-items: center
+    gap: 1.9rem
+    color: $secondary
+    &:hover
+      a
+        color: $hilightDark
+      .contacts__list-icon
+        fill: $hilightDark
+      .main-subtitle
+        font-weight: 500
+  &-icon
+    width: 2.4rem
+    height: 2.4rem
+    fill: $secondary
+  &-text
+    color: $secondary

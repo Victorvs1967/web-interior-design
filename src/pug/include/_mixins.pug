@@ -2,3 +2,11 @@
 mixin svg-icon(image)
   svg(class=attributes.class)
     use(href='@img/icons/icons.svg#'.concat(image) class='icon__'.concat(image))
+
+//- contact item
+mixin contact(item)
+  li.contacts__list-item
+    +svg-icon(item.icon).contacts__list-icon
+    .contacts__list-text
+      .main-subtitle= item.name
+      a(href= item.link, target="_blank")= item.subj

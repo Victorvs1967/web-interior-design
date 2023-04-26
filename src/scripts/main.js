@@ -1,32 +1,10 @@
-import { Fancybox } from "@fancyapps/ui"
+import { sendMsg, gallery, carousel } from "./include/func.js";
 
-Fancybox.bind("[data-fancybox]", {
-  Thumbs: false,
-  Toolbar: {
-    display: {
-      left: [],
-      middle: [],
-      right: ["close"],
-    },
-  },
-});
+// send email from formspree.io service with ajax
+sendMsg();
 
-$(document).ready(function () {
+// picture gallery with Fancybox framework
+gallery();
 
-  const owl = $('.owl-carousel');
-
-  owl.owlCarousel({
-    loop: true,
-    margin: 5,
-    items: 1,
-    smartSpeed: 500,
-   });
-
-  $('.header__right_nav-next').click(function () {
-    owl.trigger('next.owl.carousel');
-  });
-
-  $('.header__right_nav-prev').click(function () {
-    owl.trigger('prev.owl.carousel');
-  });
-});
+// slider with Owl framework (need JQuery)
+carousel();
