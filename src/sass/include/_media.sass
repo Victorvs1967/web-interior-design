@@ -1,25 +1,94 @@
 @use './base'
 @import ../include/vars
 
-@media (max-width: $breakpoint1450)
+@media (max-width: $breakpoint1440)
   .container
     max-width: 1200px
 
 @media (max-width: $breakpoint1200)
   .container
-    max-width: 1160px
-  nav
-    .menu
-      gap: 2rem
+    max-width: 1140px
 
 @media (max-width: $breakpoint992)
   .container
-    max-width: 970px
+    max-width: 960px
 
 @media (max-width: $breakpoint768)
   .container
-    max-width: 768px
+    max-width: 730px
+    .header
+      &__content
+        padding-top: 50%
+        h1
+          font-size: 6.4rem
+      &__video
+        img
+          width: 20rem
 
 @media (max-width: $breakpoint480)
   .container
-    max-width: none
+    max-width: 100%
+    padding: 0 4rem
+    .header
+      max-height: 66.7rem
+      height: 100vh
+      &__nav
+        &_menu
+          height: 5rem
+          display: flex
+          justify-content: center
+          align-items: center
+          gap: 2rem
+      &__content
+        height: 100%
+        h1
+          font-size: 4.4rem
+      &__video
+        margin-top: 20rem
+        img
+          width: 15rem
+        &_play
+          flex: none
+          gap: 1rem
+          p
+            font-size: 1.2rem
+          &-btn
+            width: 7rem
+            height: 7rem
+  .header__right
+    display: none
+  .main
+    .portfolio
+      &__title
+        margin-bottom: 2rem
+      &__content
+        grid-template-columns: 1fr
+  .about
+    padding: 4rem 0
+    &__title
+      margin-bottom: 2rem
+    &__content
+      display: block
+      &_description
+        width: 100%
+        &-info
+          display: block
+          .number
+            font-size: 6rem
+            line-height: 6rem
+  .footer
+    padding-top: 4rem
+    .contacts
+      margin-bottom: 4rem
+      &__title
+        margin-bottom: 2rem
+      &__content
+        flex-direction: column
+        gap: 2rem
+      &_form
+        min-width: 100%
+      &__content
+        display: block
+      &__list
+        grid-template-columns: 1fr
+        row-gap: 2rem
