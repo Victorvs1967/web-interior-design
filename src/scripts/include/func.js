@@ -1,24 +1,23 @@
-import { Fancybox } from "@fancyapps/ui"
+import { Fancybox, Carousel } from "@fancyapps/ui"
 
-// slider with Owl framework (need JQuery)
-export const carousel = () => {
-  $(document).ready(() => {
-    const owl = $('.owl-carousel');
-    owl.owlCarousel({
-      loop: true,
-      margin: 5,
-      items: 1,
-      smartSpeed: 500,
-    });
+// slider with Fancybox framework
+export const carousell = () => {
+  const container = document.getElementById("carousel"),
+        btnNext = document.getElementById('nav-next'),
+        btnPrev = document.getElementById('nav-prev');
 
-    $('.header__right_nav-next').click(() => {
-      owl.trigger('next.owl.carousel');
-    });
+  const options = {
+    infinite: true,
+    gap: 20,
+    adaptiveHeight: true,
+    Navigation: false,
+    friction: 1,
+  };
 
-    $('.header__right_nav-prev').click(() => {
-      owl.trigger('prev.owl.carousel');
-    });
-  });
+  const fc = new Carousel(container, options);
+
+  btnNext.addEventListener('click', () => fc.slideNext());
+  btnPrev.addEventListener('click', () => fc.slidePrev());
 };
 
 // picture gallery with Fancybox framework
@@ -37,11 +36,13 @@ export const gallery = () => {
 
 // send email from formspree.io service with ajax
 export const sendMsg = () => {
-  const status = document.querySelector(".contacts_form-status");
-  const form = document.querySelector(".contacts_form");
+  const status = document.querySelector(".contacts_form-status"),
+        form = document.querySelector(".contacts_form");
+
   const handleSubmit = async event => {
     event.preventDefault();
     const data = new FormData(event.target);
+
     fetch(event.target.action, {
       method: form.method,
       body: data,
@@ -68,5 +69,6 @@ export const sendMsg = () => {
       status.innerHTML = "Oops! There was a problem submitting your form"
     });
   };
+
   form.addEventListener("submit", handleSubmit);
 };

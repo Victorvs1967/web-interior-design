@@ -24,17 +24,19 @@ header.header#header
           p Смотреть<br>видео-презентацию
 
   .header__right
-    .header__right_slider.owl-carousel.f-carousel#carousell
-      img(src="@img/main-img_1.png", alt="main image").main_image.f-carousel__slider
-      img(src="@img/1_1.png", alt="main image").main_image.f-carousel__slider
-      img(src="@img/2_1.png", alt="main image").main_image.f-carousel__slider
-      img(src="@img/3_1.png", alt="main image").main_image.f-carousel__slider
-      img(src="@img/4_1.png", alt="main image").main_image.f-carousel__slider
-      img(src="@img/5_1.png", alt="main image").main_image.f-carousel__slider
-      img(src="@img/6_1.png", alt="main image").main_image.f-carousel__slider
-      img(src="@img/7_1.png", alt="main image").main_image.f-carousel__slider
+    .f-carousel#carousel
+      .f-carousel__viewport
+        .f-carousel__track
+          img(src="@img/main-img_1.png", alt="main image").f-carousel__slide
+          img(src="@img/1_1.png", alt="main image").f-carousel__slide
+          img(src="@img/2_1.png", alt="main image").f-carousel__slide
+          img(src="@img/3_1.png", alt="main image").f-carousel__slide
+          img(src="@img/4_1.png", alt="main image").f-carousel__slide
+          img(src="@img/5_1.png", alt="main image").f-carousel__slide
+          img(src="@img/6_1.png", alt="main image").f-carousel__slide
+          img(src="@img/7_1.png", alt="main image").f-carousel__slide
     .header__right_nav
-      button.header__right_nav-prev
+      button#nav-prev
         span #[+svg-icon('arrow').icon-prev]
-      button.header__right_nav-next
+      button#nav-next
         span #[+svg-icon('arrow').icon-next]

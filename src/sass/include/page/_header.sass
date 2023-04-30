@@ -84,27 +84,24 @@
     bottom: 0
     right: 0
     background: $hilight
-    .main_image
+    .f-carousel__slide
       height: 100vh
       object-position: center
       object-fit: cover
-    .owl-dots
-      position: absolute
+    .f-carousel__dots
+      sposition: absolute
       left: 4.8rem
       bottom: 4.8rem
       display: flex
+      justify-content: start
       gap: .9rem
       z-index: 2
-      .owl-dot
-        span
-          display: inline-block
-          width: 1.7rem
-          height: 1.7rem
-          background: #C4C4C4
-          border-radius: 50%
-        &.active
-          span
-            background: #fff
+      .f-carousel__dot
+        display: inline-block
+        width: 1.7rem
+        height: 1.7rem
+        background: $hilightDark
+        border-radius: 50%
     &_nav
       position: absolute
       right: 8.1rem
