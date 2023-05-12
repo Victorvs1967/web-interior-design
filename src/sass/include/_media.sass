@@ -1,68 +1,87 @@
 @use './base'
 @import ../include/vars
 
+// 1200 - 1440
 @media (max-width: $breakpoint1440)
-  .container
-    max-width: 1200px
-
-@media (max-width: $breakpoint1200)
   .container
     max-width: 1140px
 
-@media (max-width: $breakpoint992)
+// 992 - 1200
+@media (max-width: $breakpoint1200)
   .container
     max-width: 960px
 
-@media (max-width: $breakpoint768)
+// 768 - 992
+@media (max-width: $breakpoint992)
   .container
     max-width: 730px
-    .header
-      &__content
-        padding-top: 50%
-        h1
-          font-size: 6.4rem
-      &__video
-        img
-          width: 20rem
 
-@media (max-width: $breakpoint480)
+  .header
+    &__nav
+      &_menu
+        height: 5rem
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 2rem
+    &__content
+      max-height: 66.7rem
+      height: calc( 100vh - 5rem )
+      width: 100%
+      justify-content: space-around
+      gap: 2rem
+    &__right
+      display: none
+
+// 480 - 768
+@media (max-width: $breakpoint768)
   .container
     max-width: 100%
-    padding: 0 4rem
-    .header
-      max-height: 66.7rem
-      height: 100vh
-      &__nav
-        &_menu
-          height: 5rem
-          display: flex
-          justify-content: center
-          align-items: center
-          gap: 2rem
+    padding: 0 3rem
+
+  .header
+    &__content
+      min-width: 100%
+    .header__video_play
+      flex: none
+      gap: .5rem
+      p
+        font-size: 1.2em
+
+  .main
+    .portfolio
+      padding: 4.4rem 0
       &__content
-        height: 100%
-        h1
-          font-size: 4.4rem
-      &__video
-        margin-top: 20rem
-        img
-          width: 15rem
-        &_play
-          flex: none
-          gap: 1rem
-          p
-            font-size: 1.2rem
-          &-btn
-            width: 7rem
-            height: 7rem
-  .header__right
-    display: none
+        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
+        &_link
+          max-height: 50vh
+          img
+            width: 100%
+            object-fit: cover
+
+// 320 - 480
+@media (max-width: $breakpoint480)
+  .container
+    max-width: none
+    padding: 0 2rem
+
+  .header
+    &__content
+      h1
+        font-size: 6rem
+    &__video
+      &_play
+        p
+          display: none
+
   .main
     .portfolio
       &__title
         margin-bottom: 2rem
       &__content
-        grid-template-columns: 1fr
+        &_link
+          max-height: 40vh
+
   .about
     padding: 4rem 0
     &__title
@@ -76,6 +95,7 @@
           .number
             font-size: 6rem
             line-height: 6rem
+
   .footer
     padding-top: 4rem
     .contacts
@@ -92,3 +112,13 @@
       &__list
         grid-template-columns: 1fr
         row-gap: 2rem
+
+// 0 - 320
+@media (max-width: $breakpoint320)
+  .content
+    max-width: none
+
+  .header
+    &__content
+      h1
+        font-size: 5.5rem
