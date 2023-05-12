@@ -14,7 +14,7 @@
 // 768 - 992
 @media (max-width: $breakpoint992)
   .container
-    max-width: 730px
+    max-width: 740px
 
   .header
     &__nav
@@ -52,12 +52,22 @@
     .portfolio
       padding: 4.4rem 0
       &__content
-        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
+        display: none
+        // grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
         &_link
           max-height: 50vh
           img
             width: 100%
             object-fit: cover
+        &-slider
+          display: block
+          .f-carousel
+            &__slide
+              img
+                width: 100vw
+
+  .about
+    padding: 4.4rem 0
 
 // 320 - 480
 @media (max-width: $breakpoint480)

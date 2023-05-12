@@ -3,8 +3,9 @@ import { Fancybox, Carousel } from "@fancyapps/ui"
 // slider with Fancybox framework
 export const carousell = () => {
   const container = document.getElementById("carousel"),
-        btnNext = document.getElementById('nav-next'),
-        btnPrev = document.getElementById('nav-prev');
+  containerPortfolio = document.getElementById("carousel-portfolio"),
+  btnNext = document.getElementById('nav-next'),
+  btnPrev = document.getElementById('nav-prev');
 
   const options = {
     infinite: true,
@@ -14,7 +15,19 @@ export const carousell = () => {
     friction: 1,
   };
 
+  const options1 = {
+    infinite: true,
+    gap: 20,
+    adaptiveHeight: true,
+    Navigation: true,
+    Dots: {
+      minCount: 2,
+    },
+    friction: 1,
+  };
+
   const fc = new Carousel(container, options);
+  const fc1 = new Carousel(containerPortfolio, options1);
 
   btnNext.addEventListener('click', () => fc.slideNext());
   btnPrev.addEventListener('click', () => fc.slidePrev());
