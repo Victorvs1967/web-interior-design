@@ -70,14 +70,21 @@
     .portfolio
       padding: 4.4rem 0
       &__content
-        .f-carousel
-          &__dots
-            padding-top: 2rem
-            gap: 1.2rem
-          &__dot
-            width: 1.6rem
-            height: 1.6rem
-            background: $hilightDark
+        &_link
+          img
+            position: fixed
+        &_link:hover
+          img
+            transform: scale(1)
+      .f-carousel
+        --f-carousel-slide-height: 50vh
+        &__dots
+          padding-top: 2rem
+          // gap: 1rem
+        &__dot
+          width: 1.2rem
+          height: 1.2rem
+          background: $hilightDark
 
   .footer
     .contacts
@@ -108,9 +115,6 @@
     .portfolio
       &__title
         margin-bottom: 2rem
-      &__content
-        &_link
-          max-height: 40vh
 
   .about
     &__title
@@ -149,3 +153,8 @@
     &__content
       h1
         font-size: 5.5rem
+
+  .main
+    .portfolio
+      .f-carousel
+        --f-carousel-slide-height: 40vh

@@ -35,6 +35,8 @@ export const carousell = () => {
     friction: 1,
   });
 
+  fc1.setViewportHeight(200);
+
   const caruselRemove = () => {
     fc1.destroy();
     containerPortfolio.classList.remove('f-carousel');
