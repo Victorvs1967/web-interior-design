@@ -7,30 +7,52 @@ export const carousell = () => {
   btnNext = document.getElementById('nav-next'),
   btnPrev = document.getElementById('nav-prev');
 
-  const options = {
+  // header slider
+  const fc = new Carousel(container, {
     infinite: true,
     gap: 20,
     adaptiveHeight: true,
     Navigation: false,
-    friction: 1,
-  };
+    friction: 2,
+    transition: 'slide',
+  });
 
-  const options1 = {
+  btnNext.addEventListener('click', () => fc.slideNext());
+  btnPrev.addEventListener('click', () => fc.slidePrev());
+
+  // portfolio slider
+  const fc1 = new Carousel(containerPortfolio, {
     infinite: true,
-    gap: 20,
+    gap: 10,
     adaptiveHeight: true,
     Navigation: true,
+    friction: 2,
+    transition: 'slide',
     Dots: {
       minCount: 2,
     },
     friction: 1,
+  });
+
+  if (window.innerWidth >= 768) {
+    caruselRemove();
+  }
+
+  window.addEventListener('resize', () =>
+    window.innerWidth >= 768 ? caruselRemove() : carouselAdd());
+
+  const caruselRemove = () => {
+    fc1.destroy();
+    containerPortfolio.classList.remove('f-carousel');
+    containerPortfolio.style.display = 'grid';
   };
 
-  const fc = new Carousel(container, options);
-  const fc1 = new Carousel(containerPortfolio, options1);
+  const carouselAdd = () => {
+    containerPortfolio.classList.add('f-carousel');
+    containerPortfolio.style.display = 'block';
+    fc1.reInit();
+  };
 
-  btnNext.addEventListener('click', () => fc.slideNext());
-  btnPrev.addEventListener('click', () => fc.slidePrev());
 };
 
 // picture gallery with Fancybox framework
@@ -49,8 +71,8 @@ export const gallery = () => {
 
 // send email from formspree.io service with ajax
 export const sendMsg = () => {
-  const status = document.querySelector(".contacts_form-status"),
-        form = document.querySelector(".contacts_form");
+  const status = document.querySelector(".contacts__form-status"),
+        form = document.querySelector(".contacts__form");
 
   const handleSubmit = async event => {
     event.preventDefault();

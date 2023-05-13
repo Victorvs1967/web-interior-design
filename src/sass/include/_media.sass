@@ -11,6 +11,14 @@
   .container
     max-width: 960px
 
+  .footer
+    .contacts
+      &__content
+        gap: 2rem
+      &__list
+        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
+        gap: 3rem
+
 // 768 - 992
 @media (max-width: $breakpoint992)
   .container
@@ -52,22 +60,26 @@
     .portfolio
       padding: 4.4rem 0
       &__content
-        display: none
-        // grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
-        &_link
-          max-height: 50vh
-          img
-            width: 100%
-            object-fit: cover
-        &-slider
-          display: block
-          .f-carousel
-            &__slide
-              img
-                width: 100vw
+        .f-carousel
+          &__dots
+            padding-top: 2rem
+            gap: 1.2rem
+          &__dot
+            width: 1.6rem
+            height: 1.6rem
+            background: $hilightDark
 
   .about
     padding: 4.4rem 0
+
+  .footer
+    .contacts
+      &__content
+        display: flex
+        flex-direction: column
+      &__form,
+      &__list
+        width: 100%
 
 // 320 - 480
 @media (max-width: $breakpoint480)
@@ -115,12 +127,11 @@
       &__content
         flex-direction: column
         gap: 2rem
-      &_form
+      &__form
         min-width: 100%
       &__content
         display: block
       &__list
-        grid-template-columns: 1fr
         row-gap: 2rem
 
 // 0 - 320

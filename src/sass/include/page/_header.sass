@@ -84,19 +84,22 @@
     bottom: 0
     right: 0
     background: $hilight
-    .f-carousel__slide
-      height: 100vh
-      object-position: center
-      object-fit: cover
-    .f-carousel__dots
-      sposition: absolute
-      left: 4.8rem
-      bottom: 4.8rem
-      display: flex
-      justify-content: start
-      gap: .9rem
-      z-index: 2
-      .f-carousel__dot
+    .f-carousel
+      background: $hilight
+      --f-carousel-spacing: 8px
+      &__slide
+        height: 100vh
+        object-position: center
+        object-fit: cover
+      &__dots
+        sposition: absolute
+        left: 2.8rem
+        bottom: 2.8rem
+        display: flex
+        justify-content: start
+        gap: .9rem
+        z-index: 2
+      &__dot
         display: inline-block
         width: 1.7rem
         height: 1.7rem

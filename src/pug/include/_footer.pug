@@ -5,14 +5,14 @@ footer.footer#contacts
     .container
       h2.contacts__title Контакты
       .contacts__content
-        form(action="https://formspree.io/f/meqnrdon", method="POST").contacts_form
-          input(type="text", name="name", placeholder="Ваше имя", requied).contacts_form-field
-          input(type="text", name="email", placeholder="Ваш E-mail", requied).contacts_form-field
-          textarea(name="message", placeholder="Сообщение", requied).contacts_form-text
+        form(action="https://formspree.io/f/meqnrdon", method="POST").contacts__form
+          input(type="text", name="name", placeholder="Ваше имя", requied).contacts__form-field
+          input(type="text", name="email", placeholder="Ваш E-mail", requied).contacts__form-field
+          textarea(name="message", placeholder="Сообщение", requied).contacts__form-text
           button(type="submit").success-btn отправить
-          p.contacts_form-status
+          p.contacts__form-status
         ul.contacts__list
-          //- contact list with arrey and mixin
+          //- contact list with array and mixin
           each item in contacts
             +contact(item)
 
