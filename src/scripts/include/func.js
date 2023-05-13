@@ -2,6 +2,7 @@ import { Fancybox, Carousel } from "@fancyapps/ui"
 
 // slider with Fancybox framework
 export const carousell = () => {
+
   const container = document.getElementById("carousel"),
   containerPortfolio = document.getElementById("carousel-portfolio"),
   btnNext = document.getElementById('nav-next'),
@@ -34,13 +35,6 @@ export const carousell = () => {
     friction: 1,
   });
 
-  if (window.innerWidth >= 768) {
-    caruselRemove();
-  }
-
-  window.addEventListener('resize', () =>
-    window.innerWidth >= 768 ? caruselRemove() : carouselAdd());
-
   const caruselRemove = () => {
     fc1.destroy();
     containerPortfolio.classList.remove('f-carousel');
@@ -53,6 +47,8 @@ export const carousell = () => {
     fc1.reInit();
   };
 
+  if (window.innerWidth >= 768) caruselRemove();
+  window.addEventListener('resize', () => window.innerWidth >= 768 ? caruselRemove() : carouselAdd());
 };
 
 // picture gallery with Fancybox framework
