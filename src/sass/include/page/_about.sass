@@ -10,16 +10,17 @@
     h2
       color: $light
   &__content
-    display: flex
-    align-items: center
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
     gap: 11.5rem
-    flex: 0 auto
+    &_image
+      width: 100%
     &_description
-      max-width: 50rem
-      width: 45rem
+      width: 100%
       p
         color: $light
         margin-bottom: 3rem
+        letter-spacing: -.01em
       &-info
         display: flex
         gap: 10.5rem
@@ -27,5 +28,5 @@
           font-family: Lora
           font-size: 10rem
           line-height: 12.8rem
-          white-space: .8
+          letter-spacing: -.05em
           color: $hilight

@@ -41,6 +41,16 @@
     &__right
       display: none
 
+  .about
+    padding: 4rem 0
+    &__content
+      gap: 5rem
+      &_description
+        &-info
+          gap: 4rem
+          .number
+            font-size: 8rem
+
 // 480 - 768
 @media (max-width: $breakpoint768)
   .container
@@ -69,11 +79,9 @@
             height: 1.6rem
             background: $hilightDark
 
-  .about
-    padding: 4.4rem 0
-
   .footer
     .contacts
+      margin-bottom: 4rem
       &__content
         display: flex
         flex-direction: column
@@ -105,7 +113,6 @@
           max-height: 40vh
 
   .about
-    padding: 4rem 0
     &__title
       margin-bottom: 2rem
     &__content
@@ -115,13 +122,12 @@
         &-info
           display: block
           .number
-            font-size: 6rem
+            font-size: 8rem
             line-height: 6rem
 
   .footer
     padding-top: 4rem
     .contacts
-      margin-bottom: 4rem
       &__title
         margin-bottom: 2rem
       &__content
